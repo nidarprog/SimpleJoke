@@ -1,3 +1,4 @@
+import { Card, Divider, Typography } from "@material-ui/core";
 import React from "react";
 import { useFetch } from "./hooks";
 
@@ -8,11 +9,12 @@ export default function Joke() {
   );
   return (
     <div>
-      <h2>Joke</h2>
-      <h1>{setup}</h1>
-      <h2>
+      <Typography variant="h6">Joke</Typography>
+      <Typography variant="h4">{setup}</Typography>
+      <Divider/>
+      <Typography variant="h6" color='primary'>
         <em>{punchline}</em>
-      </h2>
+      </Typography>
     </div>
   );
 }
